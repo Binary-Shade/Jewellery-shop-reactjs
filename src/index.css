@@ -1,0 +1,173 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --box: #1F2937;
+    --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+}
+
+.gradient__bg {
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+  }
+
+.text-gradient {
+    background-image: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+* {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'space grotesk', 'poppins';
+    background-color: #0B1121;
+}
+
+
+
+
+h1{
+    color: var(--gradient-text); 
+}
+
+.head {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.hero-section{
+    background: url('./assets/bgGirl.webp');
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+.hero-section:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50%; /* Adjust the height as needed */
+    background-image: linear-gradient(to bottom, rgba(60, 45, 102, 0) 0%, rgba(34, 18, 78, 0.562) 80%, rgb(34, 17, 82) 100%);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    pointer-events: none;
+  }
+
+
+@media only screen and (max-width:768px) {
+    .cards h2{
+        font-size: 1rem;
+    }
+    .info-container h1{
+        font-size: 1em;
+        font-weight: 600;
+    }
+    
+    .info-container p{
+        font-size: 0.7em;
+    }
+
+    .hero-section {
+        background-position: top;
+    }
+    .facts {
+        margin-top: 18rem;
+    }
+    
+    #quoter {
+        background-image: white;
+    }
+
+    .hero-section:after {
+        display: none;
+    }
+    .icons ul li a{
+        width: 90px;
+        height: auto;
+    }
+}
+
+.icons ul {
+    display: flex;
+  }
+  
+  .icons ul li {
+    list-style: none;
+  }
+  
+  .icons ul li a {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 10px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    z-index: 1;
+  }
+  
+  .icons ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  .icons ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .icons ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  .icons ul li a:hover:before {
+    top: 0;
+  }
+  
+  .icons ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+  .icons ul li:nth-child(2) a:before{
+    background: #356b38;
+  }
+  
+  .icons ul li:nth-child(3) a:before {
+    background: #c47010;
+  }
+  
+  .icons ul li:nth-child(4) a:before {
+    background: #dd4b39;
+  }
